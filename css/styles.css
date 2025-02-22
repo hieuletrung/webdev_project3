@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ nav ul li a {
 }
 
 h1, h2, h3 {
-  font-family: 'Georgia', serif;
+  font-family: 'Georgia', 'Arial', serif;
 }
 
 h1 {
@@ -71,6 +71,14 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.index .container img {
+  width: 500px;
+}
+
+.portfolio .container img {
+  width: 500px;
 }
 
 .index .container {
