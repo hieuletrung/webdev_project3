@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps Example</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="map">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <header>
+      <h1>Google Maps Example</h1>
+    </header>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        const centerPoint = { lat: 37.7749, lng: -122.4194 }; // San Francisco
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: centerPoint,
+        });
+
+        const marker = new google.maps.Marker({
+          position: centerPoint,
+          map: map,
+          title: "San Francisco"
+        });
+
+        const infoWindow = new google.maps.InfoWindow({
+          content: "<h1>San Francisco</h1><p>This is San Francisco, a beautiful city in California.</p>"
+        });
+
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiEwKYjZ52N_VcOyeKbkZ-W-Gf8xE97KM&callback=initMap"></script>
+  </div>
+</body>
+
+</html>
