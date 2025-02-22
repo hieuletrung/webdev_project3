@@ -81,22 +81,6 @@ img {
   width: 500px;
 }
 
-.index .container {
-  width: 90%;
-  max-width: 100%;
-  padding: 1em;
-}
-
-.portfolio .container {
-  width: 800px;
-  margin: 5em auto;
-}
-
-/* iframe {
-  max-width: 100%;
-  height: auto;
-} */
-
 @media (min-width: 600px) {
   body {
     background-color: #f0f0f0;
